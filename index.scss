@@ -1,0 +1,65 @@
+$background: wheat;
+$greet-div: gold;
+$time-div: black;
+$greet-text: black;
+$time-text: white;
+
+
+body {
+    $background : green !global;
+    background-color : $background;
+    display:flex;
+    flex-direction: column;
+
+.heading {
+    margin: 20px auto auto 20px;
+    width: 70vw;
+    border: 2px solid;
+    transition: margin 2s;
+}
+
+.heading:hover {
+    margin: 20px 20px auto auto;
+}
+    
+    h1 {
+    font : {
+        size :40px;
+        family: helvetica;
+        weight: normal;
+    }
+}
+
+h1:hover {
+    direction: rtl;
+}
+
+
+
+
+.time {
+    margin:auto;
+    margin-top: -20px;
+    height: 50px;
+    width: 500px;
+    background-color: $time-div;
+    color: $time-text;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+.greet {
+    margin:auto;
+    margin-top: 100px;
+    height: 100px;
+    width: 500px;
+    background-color: $background;
+    color: $greet-text;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

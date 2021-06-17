@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaSS Review</title>
+    <link rel="stylesheet" href="index.css" />
+
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Welcome to The RTL, Hover on Me...</h1>
+    </div>
+
+    <div class="greet">
+        <h1 id="greet">Hello There</h1>
+    </div>
+    <div class="time">
+        <h1 id="time"></h1>
+    </div>
+
+    <script>
+
+        var time = document.getElementById('time');
+
+
+        setInterval(() => {
+            var today = new Date();
+
+            // change time
+            time.innerHTML = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+
+
+            //change greet
+            if (today.getHours() < 12) {
+                console.log(today.getHours());
+                document.getElementById('greet').innerHTML = "Good Morning";
+            } else if (today.getHours() > 12 && today.getHours() < 18) {
+                document.getElementById('greet').innerHTML = "Good Afternoon";
+            } else if (today.getHours() > 18 && today.getHours() < 20) {
+                document.getElementById('greet').innerHTML = "Good Evening";
+            } else {
+                document.getElementById('greet').innerHTML = "Good Night";
+            }
+        }, 100);
+
+    </script>
+</body>
+
+</html>
